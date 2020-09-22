@@ -15,3 +15,6 @@ cargo install --path .
 cd some_package_root
 cargo renamepkg new_name
 ```
+
+## Contribution
+Any contributions are welcomed!
