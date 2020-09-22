@@ -1,0 +1,16 @@
+[package]
+name = "cargo-renamepkg"
+version = "0.1.0"
+authors = ["ProgramSalamander <464243149@qq.com>"]
+edition = "2018"
+license = "MIT"
+description = "A simple tool to help you rename a package."
+homepage = "https://github.com/ProgramSalamander/cargo-renamepkg"
+repository = "https://github.com/ProgramSalamander/cargo-renamepkg"
+documentation = "https://github.com/ProgramSalamander/cargo-renamepkg"
+readme = "README.md"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+toml = "0.5.6"
+serde = { version = "1.0", features = ["derive"]}
