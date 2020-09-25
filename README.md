@@ -1,29 +1,28 @@
 # cargo-renamepkg
-This is a simple tool to help you rename a cargo package when you may create packages with unexpected names or just want to change its name.
+This is a simple utility to help you rename a cargo package when you may create packages with unexpected names or just want to change its name.
 
-Suppose that you just used `cargo new` to create a package whose name is expected to be `my_project`, but you find that you mistyped and now its name is `my_projcet`. 
-
-`cargo renamepkg` can help a lot when facing such an embarrassing situation, just use:
+## Use Case
+Suppose that you wanted to do this:
 ```shell
-cargo renamepkg my_project
+cargo new my_project
 ```
 
-This tool only does two things: 
+But actually you did this:
+```shell
+cargo new my_projcet
+```
+
+When facing such an embarrassing situation, just use this utility:
+```shell
+cargo renamepkg my_project my_projcet
+```
+And `cargo renamepkg` does two things for you: 
 - renames the directory
 - replaces the package name with new one in `Cargo.toml`
 
-*Note:* in current version, it only works in a package root.
-
 ## Installation
-Simply run the install command and then you can use `cargo renamepkg`.
-
 ```shell
-cargo install --path .
-```
-
-## Usage 
-```shell
-cargo renamepkg new_name
+cargo install cargo-renamepkg
 ```
 
 ## Contribution

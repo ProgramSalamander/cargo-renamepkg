@@ -1,10 +1,10 @@
 [package]
 name = "cargo-renamepkg"
-version = "0.1.1"
+version = "1.0.0"
 authors = ["ProgramSalamander <464243149@qq.com>"]
 edition = "2018"
 license = "MIT"
-description = "A simple tool to help you rename a package."
+description = "A simple utility to help you rename a package."
 homepage = "https://github.com/ProgramSalamander/cargo-renamepkg"
 repository = "https://github.com/ProgramSalamander/cargo-renamepkg"
 documentation = "https://github.com/ProgramSalamander/cargo-renamepkg"
@@ -13,4 +13,5 @@ readme = "README.md"
 
 [dependencies]
 toml = "0.5.6"
-serde = { version = "1.0", features = ["derive"]}
+toml_edit = "0.2.0"
+clap = "2.33.3"
