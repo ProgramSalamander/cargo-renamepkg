@@ -7,7 +7,7 @@
 //! # Usage
 //!
 //! ```shell
-//! cargo renamepkg <NEW_NAME> <TARGET_PATH>
+//! cargo renamepkg <TARGET_PATH> <NEW_NAME>
 //! ```
 extern crate toml_edit;
 use clap::ArgMatches;
@@ -21,8 +21,8 @@ use toml_edit::{value, Document};
 
 pub fn run(config: ArgMatches) -> Result<(), Box<dyn Error>> {
     let config = config.subcommand_matches("renamepkg").unwrap();
-    let new_name = config.value_of("new_name").unwrap();
     let target_path = PathBuf::from(config.value_of("target_path").unwrap());
+    let new_name = config.value_of("new_name").unwrap();
 
     // find the Cargo.toml
     let mut toml_file = OpenOptions::new()
