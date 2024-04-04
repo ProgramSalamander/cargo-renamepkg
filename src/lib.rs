@@ -14,8 +14,8 @@ use clap::ArgMatches;
 use std::error::Error;
 use std::fs;
 use std::fs::OpenOptions;
-use std::io::prelude::*;
 use std::io;
+use std::io::prelude::*;
 use std::path::PathBuf;
 use toml_edit::{value, Document};
 
@@ -56,7 +56,7 @@ pub fn run(config: ArgMatches) -> Result<(), Box<dyn Error>> {
         return Err(err.into());
     };
 
-    if input.trim() != "y" {
+    if input.trim().to_lowercase() != "y" {
         println!("cancelled");
         return Ok(());
     }
@@ -72,3 +72,4 @@ pub fn run(config: ArgMatches) -> Result<(), Box<dyn Error>> {
     println!("completed");
     Ok(())
 }
+
