@@ -57,7 +57,7 @@ pub fn run(config: ArgMatches) -> Result<(), Box<dyn Error>> {
         return Err(err.into());
     };
 
-    if input.trim() != "y" {
+    if input.trim().to_lowercase() != "y" {
         println!("cancelled");
         return Ok(());
     }
