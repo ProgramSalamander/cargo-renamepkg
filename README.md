@@ -1,5 +1,7 @@
 # cargo-renamepkg
-This is a simple utility to help you rename a cargo package when you may create a package with an unexpected name or just want to change its name.
+This is a simple utility to help you rename a cargo package when you may create
+a package with an unexpected name or just want to change its name. If inside a cargo
+workspace the package name is also automatically updated in the members array. (Since v1.2)
 
 ## Use Case
 Suppose that you wanted to do this:
